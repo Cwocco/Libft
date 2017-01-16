@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_create_lst_elem.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ada-cunh <ada-cunh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ada-cunh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/02/04 09:19:24 by ada-cunh          #+#    #+#             */
-/*   Updated: 2016/11/25 04:38:03 by ada-cunh         ###   ########.fr       */
+/*   Created: 2017/01/16 12:01:43 by ada-cunh          #+#    #+#             */
+/*   Updated: 2017/01/16 13:25:33 by ada-cunh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+t2_list	*ft_create_lst_elem(void *data)
 {
-	int				i;
-	unsigned char	*s11;
-	unsigned char	*s22;
+	t2_list *elem;
 
-	s11 = (unsigned char *)s1;
-	s22 = (unsigned char *)s2;
-	i = 0;
-	while (s11[i] == s22[i] && s11[i] != 0 && s22[i] != 0)
-		i++;
-	return ((int)(s11[i] - s22[i]));
+	elem = malloc(sizeof(t2_list));
+	elem->next = NULL;
+	elem->next = data;
+	return (elem);
 }
