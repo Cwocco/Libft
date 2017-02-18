@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_lst_elem.c                               :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ada-cunh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dda-silv <dda-silv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/16 12:01:43 by ada-cunh          #+#    #+#             */
-/*   Updated: 2017/01/16 13:25:33 by ada-cunh         ###   ########.fr       */
+/*   Created: 2014/12/06 21:41:01 by dda-silv          #+#    #+#             */
+/*   Updated: 2017/02/16 05:28:39 by ada-cunh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-t2_list	*ft_create_lst_elem(void *data)
-{
-	t2_list *elem;
+# define BUFF_SIZE 32
 
-	elem = malloc(sizeof(t2_list));
-	elem->next = NULL;
-	elem->next = data;
-	return (elem);
-}
+int get_next_line(int const fd, char **line);
+
+#endif

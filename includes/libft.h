@@ -6,7 +6,7 @@
 /*   By: ada-cunh <ada-cunh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 10:14:16 by ada-cunh          #+#    #+#             */
-/*   Updated: 2017/01/16 14:15:24 by ada-cunh         ###   ########.fr       */
+/*   Updated: 2017/02/11 20:47:18 by ada-cunh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,6 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
-
-typedef struct		s2_list
-{
-	void 			*data;
-	struct s2_list	*next;
-}					t2_list;
 
 void				*ft_memset(void *str, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t n);
@@ -89,8 +83,6 @@ void				ft_lstiter(t_list *lst, void(*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstrev(t_list *lst);
-t2_list				*ft_create_lst_elem(void *data);
-void				ft_add_end_lst(t2_list **list, void *data);
 
 int					ft_isalpha(int c);
 int					ft_isalnum(int c);
