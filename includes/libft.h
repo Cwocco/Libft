@@ -6,7 +6,7 @@
 /*   By: ada-cunh <ada-cunh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 10:14:16 by ada-cunh          #+#    #+#             */
-/*   Updated: 2017/02/11 20:47:18 by ada-cunh         ###   ########.fr       */
+/*   Updated: 2017/02/24 23:31:01 by ada-cunh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+int					get_next_line(int const fd, char **line);
 void				*ft_memset(void *str, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
@@ -36,6 +37,7 @@ void				ft_memdel(void **ap);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 
+int					ptr_strlen(char **str);
 char				*ft_strrev(const char *s);
 int					ft_strdigit(const char *s);
 char				*ft_strcut(const char *s, const char c);

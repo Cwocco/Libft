@@ -6,12 +6,12 @@
 /*   By: ada-cunh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/10 22:12:12 by ada-cunh          #+#    #+#             */
-/*   Updated: 2017/02/17 03:42:44 by ada-cunh         ###   ########.fr       */
+/*   Updated: 2017/02/24 23:32:10 by ada-cunh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "get_next_line.h"
+#include "includes/libft.h"
+#include "includes/get_next_line.h"
 #include <stdlib.h>
 #include <unistd.h>
 
