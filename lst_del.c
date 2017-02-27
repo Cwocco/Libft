@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   lst_del.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ada-cunh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/21 03:18:30 by ada-cunh          #+#    #+#             */
-/*   Updated: 2017/02/21 03:39:29 by ada-cunh         ###   ########.fr       */
+/*   Created: 2017/02/27 04:48:17 by ada-cunh          #+#    #+#             */
+/*   Updated: 2017/02/27 04:52:16 by ada-cunh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		ptr_strlen(char **str)
+void		*del_2dtab(void *content, size_t content_size)
 {
-	int	i;
+	char	**tmp;
+	int		i;
 
 	i = 0;
-	while (*str++)
+	tmp = (char **)content;
+	while (tmp[i])
+	{
+		free(tmp[i]);
 		i++;
-	return (i);
+	}
+	free(tmp);
 }

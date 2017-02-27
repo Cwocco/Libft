@@ -24,6 +24,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+void				del_2dtab(void *content, size_t content_size);
 int					get_next_line(int const fd, char **line);
 void				*ft_memset(void *str, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t n);

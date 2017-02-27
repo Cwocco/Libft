@@ -83,6 +83,7 @@ SRC		=	ft_putnbr.c \
 			ft_iseven.c \
 			ptr_strlen.c \
 			get_next_line.c \
+			del_2dtab.c \
 
 H		=./libft.h
 
